@@ -5,9 +5,9 @@
 
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, x):
-#         self.data = x
-#         self.next = None
+#     def __init__(self, data=0, next=None):
+#         self.data = data
+#         self.next = next
 class Solution:
     def segregate(self, head):
         count = [0, 0, 0]
