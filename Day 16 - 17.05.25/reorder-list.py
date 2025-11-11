@@ -28,15 +28,17 @@ class Solution:
         
         prev, curr = None, slow.next
         while curr:
-            nextt = curr.next
+            node = curr.next
             curr.next = prev
             prev = curr
-            curr = nextt    
+            curr = node  
         slow.next = None
        
         head1, head2 = head, prev
         while head2:
-            nextt = head1.next
+            t1 = head1.next
+            t2 = head2.next
             head1.next = head2
-            head1 = head2
-            head2 = nextt
+            head2.next = t1
+            head1 = t1
+            head2 = t2
